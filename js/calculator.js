@@ -17,16 +17,16 @@ function divide(num1, num2) {
 function operate(operator, num1, num2) {
   switch (operator) {
     case "+":
-      console.log(add(num1, num2));
+      add(num1, num2);
       break;
     case "-":
-      console.log(subtract(num1, num2));
+      subtract(num1, num2);
       break;
     case "*":
-      console.log(multiply(num1, num2));
+      multiply(num1, num2);
       break;
     case "/":
-      console.log(divide(num1, num2));
+      divide(num1, num2);
       break;
     default:
       alert("Invalid math operation.");
@@ -34,8 +34,19 @@ function operate(operator, num1, num2) {
   }
 }
 
+function concatenateDisplay(character) {
+  const display = document.getElementById("display");
+  display.innerHTML = displayValue += character;
+}
+
 let operator;
 let num1;
 let num2;
+let displayValue = '';
 
 operate("*", 5, 5);
+
+const keys = document.querySelectorAll(".key");
+keys.forEach((button) =>
+  button.addEventListener("click", () => concatenateDisplay(button.innerHTML))
+);
