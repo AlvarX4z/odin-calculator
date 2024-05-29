@@ -42,18 +42,17 @@ body {
   height: 10vh;
 }
 
-.key {
+.key,
+#equals,
+#clear {
   align-items: center;
   background-color: #f76b8a;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   width: 25vw;
-}
-
-.key:hover {
-  cursor: pointer;
 }
 
 .number {
